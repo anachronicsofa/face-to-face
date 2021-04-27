@@ -1,0 +1,120 @@
+.btn {
+  &.btn--discrete {
+    background-color: #ddd;
+    color: #333;
+    outline: none;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    &:hover {
+      background-color: #ccc;
+    }
+  }
+
+  &.btn--delete {
+    background-color: #EF8080;
+    color: rgb(245, 243, 243);
+    outline: none;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 4px;
+    &:hover {
+      background-color: #ef8080bb;
+    }
+  }
+
+  &.btn--show {
+    background-color: #7bc436;
+    color: rgb(245, 243, 243);
+    outline: none;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 4px;
+    &:hover {
+      background-color: #54bd46bb;
+    }
+    &.open {
+      background-color: #bdbdbd;
+    }
+  }
+
+  &.btn--transparent {
+    background-color: transparent;
+    border: 1px solid #eee;
+    color: #666;
+
+    &:hover {
+      background-color: whitesmoke;
+    }
+  }
+
+  &.btn--link {
+    text-transform: uppercase;
+    padding: 15px 16px;
+    background: #6C63FF;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    display: inline;
+    border-radius: 12px;
+    
+    &:hover {
+      background-color: #4b45bd;
+      color: white;
+    }
+  }
+
+  &.btn--linkado {
+    text-transform: uppercase;
+    padding: 15px 16px;
+    background: white;
+    color: #6C63FF;
+    text-decoration: none;
+    font-size: 14px;
+    display: inline;
+    border: 2px solid #6C63FF;
+    border-radius: 12px;
+    
+    &:hover {
+      background-color: #4b45bd;
+      color: white;
+    }
+  }
+
+  &.btn--small {
+    padding: 10px 15px;
+    height: 100%;
+  }
+}
+
+.btn--no-border {
+  border: none !important;
+  padding: 0%;
+}
+  
+.btn__check {
+  width: 35px;
+  height: 33px;
+  background: mediumaquamarine;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  i {
+    color: white;
+    padding: 0 2px;
+  }
+}
+
+.btn_container {
+  margin-left: 3%;
+}
+
+.btn_back {
+  margin-top: 5rem;
+}

@@ -1,0 +1,53 @@
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 58px;
+  background: #FFF;
+  box-shadow: 3px 4px rgba(150, 149, 149, 0.25);  
+}
+
+.header--logo {
+  padding-left: 8%;
+  padding-top: 28px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 15%;
+  color: #6C63FF;
+  font-family: "Poppins", sans-serif;
+}
+
+.header__buttons {
+  position: absolute;
+  display: flex;
+  top: -2px;
+  right: 10%;
+  height: 70%;
+  width: 30%;
+} 
+
+ul {
+  list-style: none;
+}
+
+li {
+  margin-left: 14px;
+}
+
+.perfil img {
+  height: 1.45rem;
+  margin-left: 14rem;
+}
+
+.name-logout{
+  margin-top: -10px;
+  display: flex;
+  font-size: 22px;
+  flex-direction: column;
+}
+
+.logout {
+  margin-left: -10px;
+  font-size: 14px;
+}
