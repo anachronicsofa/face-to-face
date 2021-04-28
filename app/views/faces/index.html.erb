@@ -15,7 +15,7 @@
     <% @faces.each do |face| %>
       <tr>
         <td><%= face.name %></td>
-        <td><%= face.collection %></td>
+        <td><%= face.collection.name %></td>
         <td><%= link_to 'Show', face %></td>
         <td><%= link_to 'Edit', edit_face_path(face) %></td>
         <td><%= link_to 'Destroy', face, method: :delete, data: { confirm: 'Are you sure?' } %></td>
