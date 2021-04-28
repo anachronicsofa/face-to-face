@@ -9,6 +9,7 @@ class RoomsController < ApplicationController
   # GET /rooms/1 or /rooms/1.json
   def show
     @collection = Collection.find(@room.collection_id)
+    @your_image = @collection.faces.sample.name
   end
 
   # GET /rooms/new
