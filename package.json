@@ -1,5 +1,11 @@
 {
   "name": "face-to-face",
   "private": true,
-  "dependencies": {}
+  "dependencies": {},
+  "version": "1.0.0",
+  "description": "face to face",
+  "main": "index.js",
+  "repository": "https://github.com/anachronicsofa/face-to-face.git",
+  "author": "aline.ramos@gocase.com.br",
+  "license": "MIT"
 }
