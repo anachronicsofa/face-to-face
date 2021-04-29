@@ -1,24 +1,22 @@
-<p id="notice"><%= notice %></p>
+<h1 class="page-title"> Room: <%= @room.name %> </h1>
 
-<p>
-  <strong>Name:</strong>
-  <%= @room.name %>
-</p>
+<div class="container">  
+  <div class="grid grid--auto-fill">
+    <% @collection.faces.each do |face| %>
+      <div class="grid__item"> 
+        <%= image_tag(face.name.downcase + ".png", :style => 'border-radius: 12px; width:180px; height:180px;')%>
+        <div class="H1toH5">
+          <label>
+            <input type="checkbox" />
+            <span class="seatButton"><%= face.name %></span>
+          </label>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
 
-<p>
-  <strong>User:</strong>
-  <%= @room.user %>
-</p>
-
-<p>
-  <strong>Open:</strong>
-  <%= @room.open %>
-</p>
-
-<p>
-  <strong>Password:</strong>
-  <%= @room.password %>
-</p>
-
-<%= link_to 'Edit', edit_room_path(@room) %> |
-<%= link_to 'Back', rooms_path %>
+<div class="image_container">
+  <h2 style="margin-left:42%"> Você é: </h2>
+  <p><%= image_tag(@your_image + ".png", :style => 'border-radius: 12px; width:180px; height:180px;')%>
+</div>

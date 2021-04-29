@@ -2,7 +2,7 @@ class LandingController < ApplicationController
   before_action :set_locale
 
   def index
-      render :layout => true
+    @user = User.new 
   end
 
   private

@@ -15,6 +15,11 @@
   <%= @collection.user %>
 </p>
 
+<p>
+  <% @collection.faces.each do |c| %>
+   <p><%= c.name %></p>
+  <% end %>
+</p>
 
 <%= link_to 'Edit', edit_collection_path(@collection) %> |
 <%= link_to 'Back', collections_path %>

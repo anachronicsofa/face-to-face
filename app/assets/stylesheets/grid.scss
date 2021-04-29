@@ -1,0 +1,82 @@
+.grid {
+  display: grid;
+  margin-left: 3%;
+  padding: 2em;
+  counter-reset: grid-items;
+  position: relative;
+}
+
+.grid::before {
+  position: absolute;
+  padding-left: 3em;
+  content: attr(data-keyword);
+}
+
+.grid--auto-fill {
+  grid-template-columns: repeat(auto-fill, minmax(260px, 260px));
+}
+
+.grid__item {
+  background-color: white;
+  border-radius: 18px;
+  height: 160px;
+  color: #fff;
+  margin-bottom: 50%;
+  margin-right: 10px;
+  counter-increment: grid-item;
+  text-align: center;
+}
+
+.H1toH5 input { 
+  display: none; 
+}
+
+.H1toH5 .seatButton { 
+  padding: 30px;
+  border-radius: 20px;
+  background: #6C63FF;
+}
+
+.H1toH5 input:checked + .seatButton { 
+  background: #1f1d4d;
+}
+
+.button {
+  border-radius: 8px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
