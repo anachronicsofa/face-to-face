@@ -2,9 +2,9 @@ User.create!(username: 'Alinezinhadb', admin: true)
 
 Collection.create!(name: 'Gravity Falls', theme: 'cartoon', user_id: 1)
 
-3.times do
+4.times do
   Face.create!(
-    name: ['Mabel', 'Dipper', 'Waddles'].sample,
+    name: ['Mabel', 'Dipper', 'Waddles', 'Wendy'].sample,
     collection_id: 1 
   )
 end
