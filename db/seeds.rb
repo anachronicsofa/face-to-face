@@ -1,15 +1,10 @@
 User.create!(name: 'Admin', admin: true)
 
-2.times do
-  Collection.create!(
-    name: ['Gravity Falls', 'Seedou'].sample,
-    user_id: 1 
-  )
-end
+Collection.create!(name: 'Gravity Falls', theme: 'cartoon', user_id: 1)
 
-2.times do
-  Collection.create!(
-    name: ['Mabel', 'Dipper'].sample,
+3.times do
+  Face.create!(
+    name: ['Mabel', 'Dipper', 'Waddles'].sample,
     collection_id: 1 
   )
 end
