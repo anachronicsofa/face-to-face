@@ -4,11 +4,7 @@
   <div class="grid grid--auto-fill">
     <% @collection.faces.each do |face| %>
       <div class="grid__item"> 
-      <% if face.name == 'Mabel' %>
-        <%= image_tag("mabel.png", :style => 'border-radius: 12px; width:180px; height:180px;')%>
-      <% else %>
-        <%= image_tag("dipper.jpeg", :style => 'border-radius: 12px; width:180px; height:180px;')%>
-      <% end %>
+        <%= image_tag(face.name.downcase + ".png", :style => 'border-radius: 12px; width:180px; height:180px;')%>
         <div class="H1toH5">
           <label>
             <input type="checkbox" />
@@ -21,5 +17,6 @@
 </div>
 
 <div class="image_container">
-  <p><%= image_tag("mabel.png", :style => 'border-radius: 12px; width:180px; height:180px;')%>
+  <h2 style="margin-left:42%"> Você é: </h2>
+  <p><%= image_tag(@your_image + ".png", :style => 'border-radius: 12px; width:180px; height:180px;')%>
 </div>
