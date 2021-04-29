@@ -9,4 +9,4 @@ Collection.create!(name: 'Gravity Falls', theme: 'cartoon', user_id: 1)
   )
 end
 
-Room.create!(name: 'Teste', user_id: 1, collection_id: 1)
+Room.create!(name: 'Teste 2', user_id: 1, collection_id: 1)
