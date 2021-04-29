@@ -1,32 +1,10 @@
-<%= form_with(model: collection, local: true) do |form| %>
-  <% if collection.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(collection.errors.count, "error") %> prohibited this collection from being saved:</h2>
-
-      <ul>
-      <% collection.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name, id: :collection_name %>
-  </div>
-
-  <div class="field">
-    <%= form.label :theme %>
-    <%= form.text_field :theme, id: :collection_theme %>
-  </div>
-
-  <div class="field">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id, id: :collection_user_id %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
+<%= simple_form_for @collection do |f| %>
+  <%= f.input :name, required: true, input_html: { class: 'text_input', maxlength: 30 } %>
+  <%= f.input :theme, required: true, input_html: { class: 'text_input',  maxlength: 15 } %>
+  <%= f.hidden_field :user_id, value: 1 %>
+  <div class="buttons">
+    <%= f.button :submit, 'Criar Coleção', :class => "button_form"%>
+    <%= link_to 'Cancelar', collections_path, :class => "button_back"%>
   </div>
 <% end %>
+
