@@ -25,11 +25,9 @@ class FacesController < ApplicationController
 
     respond_to do |format|
       if @face.save
-        format.html { redirect_to @face, notice: "Face was successfully created." }
-        format.json { render :show, status: :created, location: @face }
+        format.html { redirect_to collection_path(@face.collection), notice: "Face was successfully created." }
       else
         format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @face.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -64,6 +62,6 @@ class FacesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def face_params
-      params.require(:face).permit(:name, :collection_id)
+      params.require(:face).permit(:name, :collection_id, :image)
     end
 end
