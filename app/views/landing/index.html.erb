@@ -1,0 +1,14 @@
+<div class="box">
+  <div class="center">     
+    <h2 class="page-title"> Escolha um username: </h2>
+    
+    <div class="form_container">
+      <div class="btn_container">
+        <%= simple_form_for @user do |f| %>
+        <%= f.input :username, required: true, input_html: { class: 'text_input' } %>
+        <%= f.button :submit, 'JOGAR', class: "btn btn--link" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
