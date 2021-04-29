@@ -1,4 +1,4 @@
-User.create!(name: 'Admin', admin: true)
+User.create!(username: 'Alinezinhadb', admin: true)
 
 Collection.create!(name: 'Gravity Falls', theme: 'cartoon', user_id: 1)
 
