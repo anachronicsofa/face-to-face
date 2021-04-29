@@ -1,29 +1,28 @@
-<p id="notice"><%= notice %></p>
+<h1 class="page-title"> Faces </h1>
+<h3 id="notice"><%= notice %></h3>
+  <div class="btn_container">
+    <%= link_to 'Criar Face', new_face_path, class: "btn btn--link" %>
+  </div>
 
-<h1>Faces</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Collection</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @faces.each do |face| %>
+<div class="table_container">
+  <table class="table">
+    <thead>
       <tr>
-        <td><%= face.name %></td>
-        <td><%= face.collection.name %></td>
-        <td><%= link_to 'Show', face %></td>
-        <td><%= link_to 'Edit', edit_face_path(face) %></td>
-        <td><%= link_to 'Destroy', face, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Nome</th>
+        <th>Imagem</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
-
-<%= link_to 'New Face', new_face_path %>
+    <tbody>
+      <% @faces.each do |face| %>
+        <tr>
+          <td><%= face.name %></td>
+          <td><%= face.image %></td>
+          <td><%= link_to '✎', edit_face_path(face), class: 'btn btn--discrete' %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <br>
+</div>
