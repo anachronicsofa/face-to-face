@@ -8,6 +8,8 @@ end
 ruby "2.6.5"
 
 gem 'coffee-rails', '~> 4.2'
+gem 'kaminari'
+gem 'devise'
 gem 'faker'
 gem 'jbuilder', '~> 2.5'
 gem 'rails', '~> 5.1.6'
@@ -16,7 +18,9 @@ gem 'puma', '~> 3.7'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'simple_form'
+gem 'rest-client'
 gem 'turbolinks', '~> 5'
+gem 'sassc'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
