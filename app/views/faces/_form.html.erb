@@ -1,27 +1,11 @@
-<%= form_with(model: face, local: true) do |form| %>
-  <% if face.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(face.errors.count, "error") %> prohibited this face from being saved:</h2>
-
-      <ul>
-      <% face.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name, id: :face_name %>
-  </div>
-
-  <div class="field">
-    <%= form.label :collection_id %>
-    <%= form.text_field :collection_id, id: :face_collection_id %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
+<%= simple_form_for @face do |f| %>
+  <%= f.input :name, required: true, input_html: { class: 'text_input', maxlength: 30 } %>
+  <%= f.input :image, label: 'Link da Image', required: true, input_html: { class: 'text_input',  maxlength: 15 } %>
+  <%= f.input :collection_id, collection: Collection.all , input_html: { class: 'text_input' } %>
+  <div class="buttons">
+    <%= f.button :submit, 'Criar Face', :class => "button_form"%>
+    <%= link_to 'Cancelar', faces_path, :class => "button_back"%>
   </div>
 <% end %>
+
+

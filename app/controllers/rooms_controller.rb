@@ -7,7 +7,7 @@ class RoomsController < ApplicationController
 
   def show
     @collection = Collection.find(@room.collection_id)
-    @your_image = @collection.faces.sample.name.downcase
+    @collection.faces.sample.image.nil? ?  @your_image = @collection.faces.sample.name.downcase + ".png" : @your_image = @collection.faces.sample.image 
   end
 
   def new
