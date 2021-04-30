@@ -17,5 +17,3 @@ test:
 production:
   <<: *default
   database: face-to-face_production
-  username: face-to-face
-  password: <%= ENV['FACE-TO-FACE_DATABASE_PASSWORD'] %>
