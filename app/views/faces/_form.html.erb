@@ -1,6 +1,6 @@
 <%= simple_form_for @face do |f| %>
   <%= f.input :name, required: true, input_html: { class: 'text_input', maxlength: 30 } %>
-  <%= f.input :image, label: 'Link da Image', required: true, input_html: { class: 'text_input',  maxlength: 15 } %>
+  <%= f.input :image, label: 'Link da Image', required: true, input_html: { class: 'text_input' } %>
   <%= f.input :collection_id, collection: Collection.all , input_html: { class: 'text_input' } %>
   <div class="buttons">
     <%= f.button :submit, 'Criar Face', :class => "button_form"%>
