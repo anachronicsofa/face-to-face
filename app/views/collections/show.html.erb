@@ -4,7 +4,7 @@
   <div class="btn_container">
     <div class="form_container medium">
       <%= simple_form_for @face do |f| %>
-        <%= f.input :name, required: true, input_html: { class: 'text_input', maxlength: 30 } %>
+        <%= f.input :name, required: true, input_html: { class: 'text_input', maxlength: 15 } %>
         <%= f.input :image, label: 'Link da imagem: ', input_html: { class: 'text_input' } %>
         <%= f.hidden_field :collection_id, value: @collection.id %>
         <div class="buttons">
@@ -36,14 +36,3 @@
     </tbody>
   </table>
 </div>
-
-<script>
-
-  $("input").keypress(function(event) {
-    if (event.which == 13) {
-      event.preventDefault();
-      $("new_command").submit();
-    }
-  });
-
-</script>
